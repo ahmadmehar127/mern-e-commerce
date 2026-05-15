@@ -1,10 +1,13 @@
-import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import viteLogo from '../assets/vite.svg'
 import heroImg from '../assets/hero.png'
+import { decrement, increment } from '../features/counter/counterSlice'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
 
 export default function HomePage() {
-  const [count, setCount] = useState(0)
+  //   const [count, setCount] = useState(0)
+  const count = useAppSelector((state) => state.counter.value)
+  const dispatch = useAppDispatch()
 
   return (
     <>
@@ -21,13 +24,30 @@ export default function HomePage() {
             <code>HMR</code>
           </p>
         </div>
-        <button
+        {/* <button
           type="button"
           className="counter"
           onClick={() => setCount((count) => count + 1)}
         >
           Count is {count}
-        </button>
+        </button> */}
+        <div className="counter-row">
+          <button
+            type="button"
+            className="counter counter-icon"
+            onClick={() => dispatch(decrement())}
+            aria-label="Decrement count"
+          >
+            −
+          </button>
+          <button
+            type="button"
+            className="counter"
+            onClick={() => dispatch(increment())}
+          >
+            Count is {count}
+          </button>
+        </div>
       </section>
 
       <div className="ticks"></div>
