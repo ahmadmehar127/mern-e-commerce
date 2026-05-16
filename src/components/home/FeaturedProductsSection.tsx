@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import homeRing1 from '@/assets/home-ring1.avif'
-import homeRing2 from '@/assets/home-ring2.avif'
+import image4 from '@/assets/image-4.webp'
+import image5 from '@/assets/image-5.webp'
 import { ROUTES } from '@routes/index'
 
 type ProductCardProps = {
@@ -49,12 +49,12 @@ export default function FeaturedProductsSection() {
         <ProductCard
           title="Oura Ring 4"
           price="From $349"
-          image={homeRing2}
+          image={image4}
         />
         <ProductCard
           title="Oura Ring 4 Ceramic"
           price="$499"
-          image={homeRing1}
+          image={image5}
         />
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroFinal from '@/assets/hero-final.avif'
+import heroFinal from '@/assets/image-7.webp'
 import { ROUTES } from '@routes/index'
 
 export default function HeroSection() {
