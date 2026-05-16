@@ -19,13 +19,9 @@ export default function ProductsPage() {
           : 'All products'
 
   return (
-    <section className="mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center px-5 py-12 text-center">
-      <h1 className="mb-3 text-3xl font-medium tracking-tight text-neutral-950">
-        {heading}
-      </h1>
-      <p className="text-neutral-600">
-        Product listing will go here once the catalog API is wired up.
-      </p>
+    <section className="page">
+      <h1>{heading}</h1>
+      <p>Product listing will go here once the catalog API is wired up.</p>
     </section>
   )
 }

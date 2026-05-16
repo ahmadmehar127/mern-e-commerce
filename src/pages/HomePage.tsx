@@ -17,18 +17,14 @@ export default function HomePage() {
         className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/80 to-white"
       />
       <div className="relative z-10 flex flex-col items-center gap-4">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-neutral-950">
-          New season
-        </p>
-        <h1 className="max-w-lg text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
-          Waterproof essentials for every day
-        </h1>
-        <p className="max-w-md text-neutral-600">
+        <h6>New season</h6>
+        <h1 className="max-w-lg">Waterproof essentials for every day</h1>
+        <p className="max-w-md">
           Discover outerwear, bags, and accessories built for modern weather.
         </p>
         <Link
           to={ROUTES.products}
-          className="mt-2 inline-block bg-neutral-950 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white no-underline transition-opacity hover:opacity-85"
+          className="mt-2 inline-block bg-neutral-950 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white no-underline hover:opacity-85 hover:no-underline"
         >
           Shop now
         </Link>

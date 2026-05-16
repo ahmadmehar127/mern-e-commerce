@@ -12,4 +12,43 @@
   #root {
     @apply flex min-h-svh flex-col;
   }
+
+  h1 {
+    @apply text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl font-medium tracking-tight text-neutral-950 sm:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl font-medium text-neutral-950;
+  }
+
+  h4 {
+    @apply text-lg font-medium text-neutral-950;
+  }
+
+  h5 {
+    @apply text-base font-semibold text-neutral-950;
+  }
+
+  /* Eyebrow / label (e.g. "New season") */
+  h6 {
+    @apply text-[11px] font-bold uppercase tracking-[0.28em] text-neutral-950;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-neutral-600;
+  }
+
+  a {
+    @apply font-medium text-neutral-950 underline-offset-4 transition-colors hover:underline;
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center gap-3 px-5 py-12 text-center;
+  }
 }

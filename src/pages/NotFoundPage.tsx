@@ -3,15 +3,10 @@ import { ROUTES } from '../routes'
 
 export default function NotFoundPage() {
   return (
-    <section className="mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center px-5 py-12 text-center">
-      <h1 className="mb-3 text-3xl font-medium tracking-tight text-neutral-950">
-        Page not found
-      </h1>
-      <p className="text-neutral-600">Nothing lives at this URL.</p>
-      <Link
-        to={ROUTES.home}
-        className="mt-4 font-medium text-neutral-950 underline-offset-4 hover:underline"
-      >
+    <section className="page">
+      <h1>Page not found</h1>
+      <p>Nothing lives at this URL.</p>
+      <Link to={ROUTES.home} className="mt-2">
         Back to home
       </Link>
     </section>
