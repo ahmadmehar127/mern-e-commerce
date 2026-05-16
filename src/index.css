@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+}
+
 @layer base {
   html {
     @apply antialiased;
@@ -50,5 +55,20 @@
 @layer components {
   .page {
     @apply mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center gap-3 px-5 py-12 text-center;
+  }
+
+  /* Primary pill CTA (dark) */
+  .btn-primary {
+    @apply inline-flex rounded-full bg-neutral-900 px-7 py-3.5 text-sm font-medium text-white no-underline transition-opacity hover:bg-neutral-800 hover:no-underline hover:opacity-95;
+  }
+
+  /* Ghost pill on dark image overlays */
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center rounded-full border border-white/90 bg-transparent px-5 py-2.5 text-sm font-medium text-white no-underline transition-colors hover:bg-white/15 hover:no-underline md:px-6;
+  }
+
+  /* Cream pill on dark image overlays */
+  .btn-shop {
+    @apply inline-flex items-center justify-center rounded-full bg-[#f5f0e8] px-5 py-2.5 text-sm font-medium text-neutral-900 no-underline transition-opacity hover:no-underline hover:opacity-90 md:px-6;
   }
 }
