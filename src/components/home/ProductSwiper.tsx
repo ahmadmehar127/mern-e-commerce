@@ -1,26 +1,30 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
 
+import image1 from '@/assets/images-1.webp'
+import image2 from '@/assets/images-2.webp'
+import image3 from '@/assets/images-3.webp'
+
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import './product-swiper.css'
 
 const SLIDES = [
-  'https://swiperjs.com/demos/images/abstract-1.jpg',
-  'https://swiperjs.com/demos/images/abstract-2.jpg',
-  'https://swiperjs.com/demos/images/abstract-3.jpg',
-  'https://swiperjs.com/demos/images/abstract-4.jpg',
-  'https://swiperjs.com/demos/images/abstract-5.jpg',
-  'https://swiperjs.com/demos/images/abstract-6.jpg',
-  'https://swiperjs.com/demos/images/abstract-7.jpg',
-  'https://swiperjs.com/demos/images/abstract-8.jpg',
-  'https://swiperjs.com/demos/images/abstract-9.jpg',
+  { src: image1, alt: 'Featured product 1' },
+  { src: image2, alt: 'Featured product 2' },
+  { src: image3, alt: 'Featured product 3' },
+  { src: image1, alt: 'Featured product 1' },
+  { src: image2, alt: 'Featured product 2' },
+  { src: image3, alt: 'Featured product 3' },
+  { src: image1, alt: 'Featured product 1' },
+  { src: image2, alt: 'Featured product 2' },
+  { src: image3, alt: 'Featured product 3' },
 ] as const
 
 export default function ProductSwiper() {
   return (
-    <section className="bg-white py-12">
+    <section className="py-12">
       <Swiper
         effect="coverflow"
         grabCursor
@@ -37,9 +41,9 @@ export default function ProductSwiper() {
         modules={[EffectCoverflow, Pagination]}
         className="product-swiper"
       >
-        {SLIDES.map((src, index) => (
-          <SwiperSlide key={src}>
-            <img src={src} alt={`Product ${index + 1}`} loading="lazy" />
+        {SLIDES.map((slide, index) => (
+          <SwiperSlide key={`${slide.alt}-${index}`}>
+            <img src={slide.src} alt={slide.alt} loading="lazy" />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -44,7 +44,7 @@ function ProductCard({ title, price, image }: ProductCardProps) {
 
 export default function FeaturedProductsSection() {
   return (
-    <section className="bg-gradient-to-b from-[#f7f4ef] to-[#eef4f8] px-4 py-10 md:px-8 md:py-14 lg:px-12">
+    <section className="px-4 py-10 md:px-8 md:py-14 lg:px-12">
       <div className="mx-auto grid max-w-[1400px] gap-4 md:grid-cols-2 md:gap-5">
         <ProductCard
           title="Oura Ring 4"

@@ -71,4 +71,22 @@
   .btn-shop {
     @apply inline-flex items-center justify-center rounded-full bg-[#f5f0e8] px-5 py-2.5 text-sm font-medium text-neutral-900 no-underline transition-opacity hover:no-underline hover:opacity-90 md:px-6;
   }
+
+  .site-footer .footer-link {
+    @apply text-sm font-normal text-neutral-400 no-underline transition-colors hover:text-white hover:no-underline;
+  }
+
+  .site-footer .footer-social {
+    @apply text-white no-underline transition-opacity hover:opacity-70 hover:no-underline;
+  }
+
+  .btn-footer-subscribe {
+    @apply inline-block border border-white bg-black px-8 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white hover:text-black;
+    transform: skewX(-12deg);
+  }
+
+  .btn-footer-subscribe span {
+    @apply inline-block;
+    transform: skewX(12deg);
+  }
 }

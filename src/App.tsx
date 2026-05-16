@@ -1,4 +1,5 @@
-import ShopNavbar from './components/layout/ShopNavbar'
+import ShopNavbar from '@components/layout/ShopNavbar'
+import SiteFooter from '@components/layout/SiteFooter'
 import { AppRoutes } from './routes'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <main className="flex flex-1 flex-col pt-14">
         <AppRoutes />
       </main>
+      <SiteFooter />
     </div>
   )
 }
