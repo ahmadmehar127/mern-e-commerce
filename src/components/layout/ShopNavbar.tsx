@@ -2,7 +2,7 @@ import { Menu, Search, ShoppingBag, X } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { SHOP_NAV_ITEMS } from '../../config/shopNav'
-import { ROUTES } from '../../routes/paths'
+import { ROUTES } from '@routes/index'
 
 const linkBase =
   'whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.22em] text-neutral-950 no-underline transition-opacity hover:opacity-65'

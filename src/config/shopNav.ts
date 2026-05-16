@@ -1,4 +1,4 @@
-import { ROUTES } from '../routes/paths'
+import { ROUTES } from '@routes/index'
 
 export type ShopNavItem = {
   label: string

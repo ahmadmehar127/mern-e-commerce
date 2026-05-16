@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
-import CartPage from '../pages/CartPage'
-import HomePage from '../pages/HomePage'
-import NotFoundPage from '../pages/NotFoundPage'
-import ProductsPage from '../pages/ProductsPage'
+import CartPage from '@pages/CartPage'
+import HomePage from '@pages/HomePage'
+import NotFoundPage from '@pages/NotFoundPage'
+import ProductsPage from '@pages/ProductsPage'
 import { ROUTES } from './paths'
 
 export default function AppRoutes() {
