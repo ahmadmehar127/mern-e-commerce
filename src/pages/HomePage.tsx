@@ -1,40 +1,41 @@
-import reactLogo from '../assets/react.svg'
-import viteLogo from '../assets/vite.svg'
-import heroImg from '../assets/hero.png'
+import { Link } from 'react-router-dom'
 import { decrement, increment } from '../features/counter/counterSlice'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { ROUTES } from '../routes'
+
+const counterBtn =
+  'rounded border-2 border-transparent bg-neutral-100 px-2.5 py-1 font-mono text-base text-neutral-900 transition-colors hover:border-neutral-300 focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:outline-offset-2'
 
 export default function HomePage() {
-  //   const [count, setCount] = useState(0)
   const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/pages/HomePage.tsx</code> and save to test{' '}
-            <code>HMR</code>
-          </p>
-        </div>
-        {/* <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
+    <section className="relative isolate -mt-14 flex min-h-[min(52vh,520px)] scroll-mt-14 flex-col items-center justify-center gap-6 overflow-hidden bg-[url(/shop-hero.png)] bg-cover bg-[position:center_28%] bg-no-repeat px-5 pt-14 text-center">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/80 to-white"
+      />
+      <div className="relative z-10 flex flex-col items-center gap-4">
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-neutral-950">
+          New season
+        </p>
+        <h1 className="max-w-lg text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+          Waterproof essentials for every day
+        </h1>
+        <p className="max-w-md text-neutral-600">
+          Discover outerwear, bags, and accessories built for modern weather.
+        </p>
+        <Link
+          to={ROUTES.products}
+          className="mt-2 inline-block bg-neutral-950 px-8 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white no-underline transition-opacity hover:opacity-85"
         >
-          Count is {count}
-        </button> */}
-        <div className="counter-row">
+          Shop now
+        </Link>
+        <div className="mt-4 flex items-center gap-2.5">
           <button
             type="button"
-            className="counter counter-icon"
+            className={`${counterBtn} min-w-9 font-semibold`}
             onClick={() => dispatch(decrement())}
             aria-label="Decrement count"
           >
@@ -42,99 +43,13 @@ export default function HomePage() {
           </button>
           <button
             type="button"
-            className="counter"
+            className={counterBtn}
             onClick={() => dispatch(increment())}
           >
             Count is {count}
           </button>
         </div>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank" rel="noreferrer">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank" rel="noreferrer">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank" rel="noreferrer">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank" rel="noreferrer">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank" rel="noreferrer">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </div>
+    </section>
   )
 }

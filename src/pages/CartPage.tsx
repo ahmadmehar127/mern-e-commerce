@@ -1,18 +1,20 @@
 import { Link } from 'react-router-dom'
 import { ROUTES } from '../routes'
 
-export default function NotFoundPage() {
+export default function CartPage() {
   return (
     <section className="mx-auto flex max-w-2xl flex-1 flex-col items-center justify-center px-5 py-12 text-center">
       <h1 className="mb-3 text-3xl font-medium tracking-tight text-neutral-950">
-        Page not found
+        Cart
       </h1>
-      <p className="text-neutral-600">Nothing lives at this URL.</p>
+      <p className="text-neutral-600">
+        Your bag is empty. Browse the catalog to add items.
+      </p>
       <Link
-        to={ROUTES.home}
+        to={ROUTES.products}
         className="mt-4 font-medium text-neutral-950 underline-offset-4 hover:underline"
       >
-        Back to home
+        Shop products
       </Link>
     </section>
   )
